@@ -9,8 +9,9 @@ const meta: Meta = {
     children: {
       control: {
         type: 'text',
-        defaultValue: 'Hi'
+
       },
+      defaultValue: 'Click Me'
     },
     isHero: {
       control: {
