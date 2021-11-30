@@ -65,7 +65,7 @@ export const TrInput: FC<InputProps> = ({
         id={name}
         defaultValue={value}
         className="regular-text ltr"
-        //onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => onChange(e.target.value)}
       />
     </FieldTr>
   );
@@ -78,7 +78,7 @@ export interface SubmitProps {
   variant?: 'primary' | 'secondary';
   disabled?: boolean;
   onClick?: () => void;
-  label?:string;
+  label?: string;
 }
 
 export const TrSubmitButton: FC<SubmitProps> = ({
@@ -87,9 +87,13 @@ export const TrSubmitButton: FC<SubmitProps> = ({
   value,
   disabled,
   onClick,
-  label
+  label,
 }) => (
-  <FieldTr name={name} label={label ? label : value} hideLabel={label ? false : true}>
+  <FieldTr
+    name={name}
+    label={label ? label : value}
+    hideLabel={label ? false : true}
+  >
     <input
       type="submit"
       name={name}
