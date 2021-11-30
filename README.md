@@ -1,5 +1,9 @@
 # WP Admin Components
 
+WordPress admin UI as React components for plugin development
+
+[![CI](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml/badge.svg)](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml)
+
 ![buttons-first](https://user-images.githubusercontent.com/1994311/143970215-c0d3d4ba-00a0-46bc-bc1a-65344a23ec90.jpg)
 ![tabs-first](https://user-images.githubusercontent.com/1994311/143970259-e448c6f5-369b-4f70-a4df-ef9f72f04e84.jpg)
 
