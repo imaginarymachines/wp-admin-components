@@ -1,5 +1,6 @@
 import Button, { ButtonProps } from './Button';
 import { Tabs, TabsProps, TabProps } from './Tabs';
+import {Notice,NoticeProps} from './Notice';
 import {
   FormTable,
   FormTableProps,
@@ -24,4 +25,6 @@ export {
   TrInput,
   TrSelect,
   TrSubmitButton,
+  Notice,
+  NoticeProps,
 };
