@@ -56,7 +56,7 @@ export const TabContent :FC<TabContentProps> = ({id,children,isSelected}) => {
       className="tabs-content"
       role="tabpanel"
       aria-labelledby={`tab-button-${id}`}
-      aria-display={isSelected}
+      aria-hidden={!isSelected}
       style={isSelected ? {
         display:'block',
         visibility:'visible'

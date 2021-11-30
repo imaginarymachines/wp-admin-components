@@ -50,7 +50,7 @@ exports[`Tabs Renders 1`] = `
       </ul>
     </h2>
     <div
-      aria-display="true"
+      aria-hidden="false"
       aria-labelledby="tab-button-one"
       class="tabs-content"
       id="tab-one"
@@ -62,7 +62,7 @@ exports[`Tabs Renders 1`] = `
       </div>
     </div>
     <div
-      aria-display="false"
+      aria-hidden="true"
       aria-labelledby="tab-button-two"
       class="tabs-content"
       id="tab-two"
@@ -74,7 +74,7 @@ exports[`Tabs Renders 1`] = `
       </div>
     </div>
     <div
-      aria-display="false"
+      aria-hidden="true"
       aria-labelledby="tab-button-three"
       class="tabs-content"
       id="tab-three"
@@ -139,7 +139,7 @@ exports[`Tabs Renders with inital tab 1`] = `
       </ul>
     </h2>
     <div
-      aria-display="false"
+      aria-hidden="true"
       aria-labelledby="tab-button-one"
       class="tabs-content"
       id="tab-one"
@@ -151,7 +151,7 @@ exports[`Tabs Renders with inital tab 1`] = `
       </div>
     </div>
     <div
-      aria-display="true"
+      aria-hidden="false"
       aria-labelledby="tab-button-two"
       class="tabs-content"
       id="tab-two"
@@ -163,7 +163,7 @@ exports[`Tabs Renders with inital tab 1`] = `
       </div>
     </div>
     <div
-      aria-display="false"
+      aria-hidden="true"
       aria-labelledby="tab-button-three"
       class="tabs-content"
       id="tab-three"
