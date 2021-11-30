@@ -25,8 +25,11 @@ export interface TabButtonProps  {
 
 export const TabButton :FC<TabButtonProps> = ({id,label,isSelected,onClick}) => {
   return(
-    <li id={`tab-button-${id}`} aria-controls={`tab-${id}`}  aria-selected={isSelected}>
+    <li
+
+    id={`tab-button-${id}`} aria-controls={`tab-${id}`}  aria-selected={isSelected}>
       <a
+        className="nav-tab"
         href={`#${id}`}
         onClick={(e) => {
           e.preventDefault();
@@ -48,7 +51,9 @@ export interface TabContentProps extends HTMLAttributes<HTMLDivElement> {
 
 export const TabContent :FC<TabContentProps> = ({id,children,isSelected}) => {
   return(
-    <div id={`tab-${id}`}
+    <div
+      id={`tab-${id}`}
+      className="tabs-content"
       role="tabpanel"
       aria-labelledby={`tab-button-${id}`}
       aria-display={isSelected}
@@ -87,7 +92,8 @@ const Tabs: FC<TabsProps> = (props) => {
   const isSelectedTab = (tab:TabProps) => selectedTab === tab.id;
    return(
     <div id={props.id}>
-      <ul role="tablist">
+      <h2 className="nav-tab-wrapper">
+<ul role="tablist">
         {tabs.map((tab:TabProps) =>(
           <TabButton
               key={tab.id}
@@ -99,6 +105,8 @@ const Tabs: FC<TabsProps> = (props) => {
            )
         )}
       </ul>
+        </h2>
+
       <>
       {tabs.map((tab:TabProps) =>(
           <TabContent
