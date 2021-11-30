@@ -1,14 +1,10 @@
 import {Button} from '../src';
 import React from 'react';
-import {render} from '@testing-library/react'
-
-
+import snapshot from './snapshot';
 it( 'Renders default button', () => {
-    const {container} = render(<Button onClick={() =>{}}>ClickMe</Button>);
-    expect(container).toMatchSnapshot();
+    snapshot(<Button onClick={() =>{}}>ClickMe</Button>);
 });
 
 it( 'Renders default link', () => {
-    const {container} = render(<Button a={'https://hiroy.club'}>ClickMe</Button>);
-    expect(container).toMatchSnapshot();
+    snapshot(<Button a={'https://hiroy.club'}>ClickMe</Button>);
 });
