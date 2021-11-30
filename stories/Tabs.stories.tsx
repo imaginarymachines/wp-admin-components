@@ -20,7 +20,6 @@ const meta: Meta = {
         {id: 'one', children:<div>Tab One Content</div>,label:'One'},
         {id: 'two', children:<div>Tab Two Content</div>,label:'Two'},
         {id: 'three', children:<div>Tab Three Content</div>,label:'Three'},
-
       ]
     },
 

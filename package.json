@@ -1,6 +1,7 @@
 {
   "name": "@imaginary-machines/wp-admin-components",
-  "version": "0.1.0",
+  "private": false,
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -20,7 +21,7 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs-build"
   },
   "peerDependencies": {
     "react": ">=16"
