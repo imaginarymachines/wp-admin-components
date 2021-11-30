@@ -1,4 +1,5 @@
 {
+  "name": "@imaginary-machines/wp-admin-components",
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -8,7 +9,7 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "scripts": {
     "start": "tsdx watch",
@@ -35,17 +36,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "admin-components",
   "author": "Josh Pollock",
   "module": "dist/admin-components.esm.js",
   "size-limit": [
     {
-      "path": "dist/admin-components.cjs.production.min.js",
-      "limit": "10 KB"
+      "path": "dist/wp-admin-components.cjs.production.min.js",
+      "limit": "5 KB"
     },
     {
-      "path": "dist/admin-components.esm.js",
-      "limit": "10 KB"
+      "path": "dist/wp-admin-components.esm.js",
+      "limit": "5 KB"
     }
   ],
   "devDependencies": {
