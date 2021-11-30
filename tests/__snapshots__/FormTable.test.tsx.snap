@@ -57,17 +57,17 @@ exports[`FormTable creates form 1`] = `
             </select>
           </td>
         </tr>
-        <p
+        <span
           class="submit"
         >
           <input
-            class="button button-secondary button-hero"
+            class="button button-primary button-hero"
             id="sub-1"
             name="sub-1"
             type="submit"
             value="Click Me"
           />
-        </p>
+        </span>
       </tbody>
     </table>
   </form>

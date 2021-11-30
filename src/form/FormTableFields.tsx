@@ -87,15 +87,15 @@ export const TrSubmitButton: FC<SubmitProps> = ({
   disabled,
   onClick,
 }) => (
-  <p className="submit">
+  <span className="submit">
     <input
       type="submit"
       name={name}
       id={name}
-      className={`button button-${variant ? variant : 'secondary'} button-hero`}
+      className={`button button-${variant ? variant : 'primary'} button-hero`}
       value={value}
       disabled={disabled}
       onClick={onClick}
     />
-  </p>
+  </span>
 );

@@ -29,13 +29,9 @@ let submitProps = {
     id:'sub-1',
     name: 'sub-1',
     value: 'Click Me'
-}
+};
 
-export const formTableTestProps = {
-    submitProps,
-    selectProps,
-    inputProps
-}
+
 
 describe('FormTable', () => {
     it( 'creates form', () => {

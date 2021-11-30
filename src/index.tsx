@@ -4,11 +4,11 @@ import {
   FormTable,
   FormTableProps,
   Form,
+  FormProps,
   FieldTr,
   TrInput,
   TrSelect,
   TrSubmitButton,
-  FormProps,
 } from './form';
 export {
   Button,
