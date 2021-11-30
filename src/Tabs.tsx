@@ -93,7 +93,7 @@ const Tabs: FC<TabsProps> = (props) => {
    return(
     <div id={props.id}>
       <h2 className="nav-tab-wrapper">
-<ul role="tablist">
+        <ul role="tablist">
         {tabs.map((tab:TabProps) =>(
           <TabButton
               key={tab.id}
