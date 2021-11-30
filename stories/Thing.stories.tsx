@@ -9,6 +9,7 @@ const meta: Meta = {
     children: {
       control: {
         type: 'text',
+        defaultValue: 'Hi'
       },
     },
   },
