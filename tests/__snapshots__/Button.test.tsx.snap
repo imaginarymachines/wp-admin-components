@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders default button 1`] = `
+<div>
+  <button
+    class="button  button-primary"
+  >
+    ClickMe
+  </button>
+</div>
+`;
+
+exports[`Renders default link 1`] = `
+<div>
+  <a
+    class="button  button-primary"
+    href="https://hiroy.club"
+  >
+    ClickMe
+  </a>
+</div>
+`;

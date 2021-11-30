@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes, ReactChild,useMemo, useState } from 'react';
+import React, { FC, HTMLAttributes, ReactChild,useState } from 'react';
 
 
 export interface TabProps {

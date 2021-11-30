@@ -4,7 +4,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
   children?: ReactChild;
   variant?: 'primary' | 'secondary';
-  a?:"string";
+  a?:string;
   onClick?: () => void;
   isSmall?:boolean;
   isHero?:boolean;
