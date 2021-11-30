@@ -6,11 +6,26 @@ WordPress admin UI as React components for plugin development
 
 ## Usage
 
+### Install
+
+```bash
+yarn add @imaginary-machines/wp-admin-components
+```
+
+or
+
+```bash
+npm i @imaginary-machines/wp-admin-components
+```
+
 ### Buttons
 
 ![buttons-first](https://user-images.githubusercontent.com/1994311/143970215-c0d3d4ba-00a0-46bc-bc1a-65344a23ec90.jpg)
 
 ```jsx
+
+
+
 import {Button} from "@imaginary-machines/wp-admin-components"
 <Button onClick={() => {console.log('Clicked')}}>Click Me</Button>
 ```
@@ -37,7 +52,41 @@ import {Tabs} from "@imaginary-machines/wp-admin-components"
 
 ### Forms
 
-@todo
+```jsx
+import {
+  FormTable, FormProps,TrInput,TrSelect,TrSubmitButton,Form }
+from  "@imaginary-machines/wp-admin-components"
+const [values,setValues] = useState({
+      input:'Input',
+      select:'two'
+  })
+  return (
+    <Form id={id} onSubmit={onSubmit}>
+      <FormTable >
+          <>
+              <TrInput
+                  label={'Input Field'}
+                  id={'input'}
+                  name={'input'}
+                  value={values.input}
+                  onChange={(value:string) => setValues({...values,input:value})}
+              />
+              <TrSelect
+                  label={'Select Field'}
+                  id={'select'}
+                  name={'select'}
+                  value={values.select}
+                  onChange={(value:string) => setValues({...values,select:value})}
+              />
+              <TrSubmitButton
+                  id={'submit-button'}
+                  name={'submit-button'}
+                  value={'Save'}
+              />
+          </>
+      </FormTable>
+  </Form>
+```
 
 ## Development
 
