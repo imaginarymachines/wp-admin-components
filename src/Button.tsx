@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes, ReactChild } from 'react';
+import React, { FC, HTMLAttributes, ReactChild, useMemo } from 'react';
 
 export interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactChild;
@@ -17,7 +17,7 @@ const Button: FC<ButtonProps> = ({
   isSmall,
   isHero,
 }) => {
-  let className = `button  button-${variant ? variant : 'primary'}`;
+  let className = useMemo( () =>  `button  button-${variant ? variant : 'primary'}`, [variant]);
   if (isSmall) {
     className = `${className} button-small`;
   }

@@ -116,3 +116,10 @@ This loads the stories from `./stories`.
 ### Tests
 
 Jest tests are set up to run with or `yarn test`.
+
+
+### Publish to npm
+
+```bash
+npm publish --access public
+```
