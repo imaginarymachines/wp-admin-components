@@ -1,4 +1,4 @@
 
 import Button,{ButtonProps}from './Button';
-
-export {ButtonProps, Button};
+import Tabs, {TabsProps,TabProps} from './Tabs';
+export {ButtonProps, Button,Tabs,TabsProps,TabProps};
