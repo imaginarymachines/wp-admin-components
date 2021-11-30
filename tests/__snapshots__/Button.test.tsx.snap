@@ -20,3 +20,33 @@ exports[`Renders default link 1`] = `
   </a>
 </div>
 `;
+
+exports[`Renders hero button 1`] = `
+<div>
+  <button
+    class="button  button-primary button-hero"
+  >
+    Hero
+  </button>
+</div>
+`;
+
+exports[`Renders secondary button 1`] = `
+<div>
+  <button
+    class="button  button-secondary"
+  >
+    Secondary
+  </button>
+</div>
+`;
+
+exports[`Renders small button 1`] = `
+<div>
+  <button
+    class="button  button-primary button-small"
+  >
+    Small
+  </button>
+</div>
+`;
