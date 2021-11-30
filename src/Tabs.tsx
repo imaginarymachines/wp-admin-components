@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes, ReactChild,useState } from 'react';
+import React, { FC, HTMLAttributes, ReactChild,useMemo,useState } from 'react';
 
 
 export interface TabProps {
@@ -73,16 +73,18 @@ export const TabContent :FC<TabContentProps> = ({id,children,isSelected}) => {
 export interface TabsProps extends HTMLAttributes<HTMLDivElement> {
   id:string;
   tabs: TabProps[]
+  initialTab?:string;
 }
 
 
 const Tabs: FC<TabsProps> = (props) => {
-  const tabs = [
-    {id: 'one', children:<div>Tab One Content</div>,label:'One'},
-    {id: 'two', children:<div>Tab Two Content</div>,label:'Two'}
-  ];
-
+  const tabs = useMemo( () => {
+    return props.tabs.length ? props.tabs : [];
+  }, [props.tabs]);
   const [selectedTab,setSelectedTab] = useState<string|null>(() =>{
+    if( props.initialTab){
+      return props.initialTab;
+    }
     if(! tabs.length){
       return null;
     }
@@ -90,7 +92,8 @@ const Tabs: FC<TabsProps> = (props) => {
   });
 
   const isSelectedTab = (tab:TabProps) => selectedTab === tab.id;
-   return(
+
+  return(
     <div id={props.id}>
       <h2 className="nav-tab-wrapper">
         <ul role="tablist">

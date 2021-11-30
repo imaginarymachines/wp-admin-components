@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs Renders 1`] = `
+<div>
+  <div
+    id="tabs-1"
+  >
+    <h2
+      class="nav-tab-wrapper"
+    >
+      <ul
+        role="tablist"
+      >
+        <li
+          aria-controls="tab-one"
+          aria-selected="true"
+          id="tab-button-one"
+        >
+          <a
+            class="nav-tab"
+            href="#one"
+          >
+            One
+          </a>
+        </li>
+        <li
+          aria-controls="tab-two"
+          aria-selected="false"
+          id="tab-button-two"
+        >
+          <a
+            class="nav-tab"
+            href="#two"
+          >
+            Two
+          </a>
+        </li>
+        <li
+          aria-controls="tab-three"
+          aria-selected="false"
+          id="tab-button-three"
+        >
+          <a
+            class="nav-tab"
+            href="#three"
+          >
+            Three
+          </a>
+        </li>
+      </ul>
+    </h2>
+    <div
+      aria-display="true"
+      aria-labelledby="tab-button-one"
+      class="tabs-content"
+      id="tab-one"
+      role="tabpanel"
+      style="display: block; visibility: visible;"
+    >
+      <div>
+        Tab One Content
+      </div>
+    </div>
+    <div
+      aria-display="false"
+      aria-labelledby="tab-button-two"
+      class="tabs-content"
+      id="tab-two"
+      role="tabpanel"
+      style="display: none; visibility: hidden;"
+    >
+      <div>
+        Tab Two Content
+      </div>
+    </div>
+    <div
+      aria-display="false"
+      aria-labelledby="tab-button-three"
+      class="tabs-content"
+      id="tab-three"
+      role="tabpanel"
+      style="display: none; visibility: hidden;"
+    >
+      <div>
+        Tab Three Content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs Renders with inital tab 1`] = `
+<div>
+  <div
+    id="tabs-2"
+  >
+    <h2
+      class="nav-tab-wrapper"
+    >
+      <ul
+        role="tablist"
+      >
+        <li
+          aria-controls="tab-one"
+          aria-selected="false"
+          id="tab-button-one"
+        >
+          <a
+            class="nav-tab"
+            href="#one"
+          >
+            One
+          </a>
+        </li>
+        <li
+          aria-controls="tab-two"
+          aria-selected="true"
+          id="tab-button-two"
+        >
+          <a
+            class="nav-tab"
+            href="#two"
+          >
+            Two
+          </a>
+        </li>
+        <li
+          aria-controls="tab-three"
+          aria-selected="false"
+          id="tab-button-three"
+        >
+          <a
+            class="nav-tab"
+            href="#three"
+          >
+            Three
+          </a>
+        </li>
+      </ul>
+    </h2>
+    <div
+      aria-display="false"
+      aria-labelledby="tab-button-one"
+      class="tabs-content"
+      id="tab-one"
+      role="tabpanel"
+      style="display: none; visibility: hidden;"
+    >
+      <div>
+        Tab One Content
+      </div>
+    </div>
+    <div
+      aria-display="true"
+      aria-labelledby="tab-button-two"
+      class="tabs-content"
+      id="tab-two"
+      role="tabpanel"
+      style="display: block; visibility: visible;"
+    >
+      <div>
+        Tab Two Content
+      </div>
+    </div>
+    <div
+      aria-display="false"
+      aria-labelledby="tab-button-three"
+      class="tabs-content"
+      id="tab-three"
+      role="tabpanel"
+      style="display: none; visibility: hidden;"
+    >
+      <div>
+        Tab Three Content
+      </div>
+    </div>
+  </div>
+</div>
+`;
