@@ -31,11 +31,17 @@ let submitProps = {
     value: 'Click Me'
 }
 
+export const formTableTestProps = {
+    submitProps,
+    selectProps,
+    inputProps
+}
+
 describe('FormTable', () => {
     it( 'creates form', () => {
         const onSubmit = ()=>{};
-        snapshot(<FormTable>
-            <Form id="form-1" onSubmit={onSubmit}>
+        snapshot(<Form id="form-1" onSubmit={onSubmit}>
+            <FormTable >
                 <>
                     <TrInput
                         {...inputProps}
@@ -47,7 +53,7 @@ describe('FormTable', () => {
                         {...submitProps}
                     />
                 </>
-            </Form>
-        </FormTable>)
+            </FormTable>
+        </Form>)
     });
 })

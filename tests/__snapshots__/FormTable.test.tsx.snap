@@ -2,14 +2,14 @@
 
 exports[`FormTable creates form 1`] = `
 <div>
-  <table
-    class="form-table"
-    role="presentation"
+  <form
+    id="form-1"
   >
-    <tbody>
-      <form
-        id="form-1"
-      >
+    <table
+      class="form-table"
+      role="presentation"
+    >
+      <tbody>
         <tr>
           <th
             scope="row"
@@ -68,8 +68,8 @@ exports[`FormTable creates form 1`] = `
             value="Click Me"
           />
         </p>
-      </form>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </form>
 </div>
 `;
