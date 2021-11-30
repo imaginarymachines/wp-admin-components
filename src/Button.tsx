@@ -9,7 +9,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   isHero?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({
+ const Button: FC<ButtonProps> = ({
   children,
   variant,
   a,

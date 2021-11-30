@@ -90,7 +90,7 @@ export interface TabsProps extends HTMLAttributes<HTMLDivElement> {
   initialTab?: string;
 }
 
-const Tabs: FC<TabsProps> = (props) => {
+export const Tabs: FC<TabsProps> = (props) => {
   const tabs = useMemo(() => {
     return props.tabs.length ? props.tabs : [];
   }, [props.tabs]);
@@ -132,4 +132,3 @@ const Tabs: FC<TabsProps> = (props) => {
     </div>
   );
 };
-export default Tabs;
