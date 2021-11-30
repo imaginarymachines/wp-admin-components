@@ -63,9 +63,9 @@ export const TrInput: FC<InputProps> = ({
         name={name}
         type={type ? type : 'text'}
         id={name}
-        value={value}
+        defaultValue={value}
         className="regular-text ltr"
-        onChange={(e) => onChange(e.target.value)}
+        //onChange={(e) => onChange(e.target.value)}
       />
     </FieldTr>
   );

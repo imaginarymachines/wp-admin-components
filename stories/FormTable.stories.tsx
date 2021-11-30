@@ -62,10 +62,12 @@ const Test : FC<FormProps> = ({id,onSubmit}) => {
           <>
               <TrInput
                   {...inputProps}
+                  value={values.input}
                   onChange={(value:string) => setValues({...values,input:value})}
               />
               <TrSelect
                   {...selectProps}
+                  value={values.select}
                   onChange={(value:string) => setValues({...values,select:value})}
 
               />
