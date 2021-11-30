@@ -78,6 +78,7 @@ export interface SubmitProps {
   variant?: 'primary' | 'secondary';
   disabled?: boolean;
   onClick?: () => void;
+  label?:string;
 }
 
 export const TrSubmitButton: FC<SubmitProps> = ({
@@ -86,8 +87,9 @@ export const TrSubmitButton: FC<SubmitProps> = ({
   value,
   disabled,
   onClick,
+  label
 }) => (
-  <span className="submit">
+  <FieldTr name={name} label={label ? label : value} hideLabel={label ? false : true}>
     <input
       type="submit"
       name={name}
@@ -97,5 +99,5 @@ export const TrSubmitButton: FC<SubmitProps> = ({
       disabled={disabled}
       onClick={onClick}
     />
-  </span>
+  </FieldTr>
 );

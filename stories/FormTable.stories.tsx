@@ -58,22 +58,22 @@ const Test : FC<FormProps> = ({id,onSubmit}) => {
   })
   return (
     <Form id={id} onSubmit={onSubmit}>
-    <FormTable >
-        <>
-            <TrInput
-                {...inputProps}
-                onChange={(value:string) => setValues({...values,input:value})}
-            />
-            <TrSelect
-                {...selectProps}
-                onChange={(value:string) => setValues({...values,select:value})}
+      <FormTable >
+          <>
+              <TrInput
+                  {...inputProps}
+                  onChange={(value:string) => setValues({...values,input:value})}
+              />
+              <TrSelect
+                  {...selectProps}
+                  onChange={(value:string) => setValues({...values,select:value})}
 
-            />
-            <TrSubmitButton
-                {...submitProps}
-            />
-        </>
-    </FormTable>
+              />
+              <TrSubmitButton
+                  {...submitProps}
+              />
+          </>
+      </FormTable>
   </Form>
 
   )

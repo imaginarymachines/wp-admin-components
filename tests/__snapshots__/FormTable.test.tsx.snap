@@ -15,6 +15,7 @@ exports[`FormTable creates form 1`] = `
             scope="row"
           >
             <label
+              class=""
               for="i-1"
             >
               Input One
@@ -35,6 +36,7 @@ exports[`FormTable creates form 1`] = `
             scope="row"
           >
             <label
+              class=""
               for="s-1"
             >
               Select
@@ -57,17 +59,27 @@ exports[`FormTable creates form 1`] = `
             </select>
           </td>
         </tr>
-        <span
-          class="submit"
-        >
-          <input
-            class="button button-primary button-hero"
-            id="sub-1"
-            name="sub-1"
-            type="submit"
-            value="Click Me"
-          />
-        </span>
+        <tr>
+          <th
+            scope="row"
+          >
+            <label
+              class="sr-only screen-reader-text"
+              for="sub-1"
+            >
+              Click Me
+            </label>
+          </th>
+          <td>
+            <input
+              class="button button-primary button-hero"
+              id="sub-1"
+              name="sub-1"
+              type="submit"
+              value="Click Me"
+            />
+          </td>
+        </tr>
       </tbody>
     </table>
   </form>
