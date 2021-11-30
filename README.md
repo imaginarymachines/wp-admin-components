@@ -48,8 +48,36 @@ import {Tabs} from "@imaginary-machines/wp-admin-components"
 
 ### Notices
 
-@todo
+#### Dismissable Info Notice
 
+```jsx
+import {Notice }from  "@imaginary-machines/wp-admin-components"
+
+<Notice
+  heading={"Hey You! Buy Things!"}
+  link={"https://hiroy.club/store"}
+  description={"Click This Link"}
+  type="ifno"
+  isDismissable={true}
+  onDismissed={()=> {
+    //...
+  }}
+/>
+```
+#### Dismissable Error Notice
+
+```jsx
+import {Notice }from  "@imaginary-machines/wp-admin-components"
+
+<Notice
+  description={"There Was Error"}
+  type="error"
+  isDismissable={true}
+  onDismissed={()=> {
+    //...
+  }}
+/>
+```
 ### Forms
 
 ```jsx
