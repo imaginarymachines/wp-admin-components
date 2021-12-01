@@ -1,0 +1,71 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { TrInput,TrSubmitButton, TrSelect,Form,FormTable } from '../src';
+
+<Meta title="Table Form Fields" component={FormTable} />
+
+# Fields For FormTable
+
+These components are field areas that are inside of a `<tr>` element.
+
+## Using Fields Inside FormTable
+
+With `MDX` we can define a story for `Checkbox` right in the middle of our
+markdown documentation.
+
+<Canvas>
+  <Story name="Using With FormTable Component">
+    <Form id={'form-id'} onSubmit={onSubmit}>
+      <FormTable >
+          <>
+              <!-- Fields -->
+               <TrSubmitButton
+                  id={'submit-button'}
+                  name={'submit-button'}
+                  value={'Save'}
+              />
+          </>
+      </FormTable>
+    </Form>
+  </Story>
+</Canvas>
+
+
+## Input Field
+
+<Canvas>
+  <Story name="Input Field">
+    <Form id={id} onSubmit={onSubmit}>
+      <FormTable >
+          <>
+              <TrSelect
+                  label={'Select Field'}
+                  id={'select'}
+                  name={'select'}
+                  value={values.select}
+                  onChange={(value) => setValues({...values,select:value})}
+              />
+          </>
+      </FormTable>
+    </Form>
+  </Story>
+</Canvas>
+
+
+## Select Field
+<Canvas>
+  <Story name="Select Field">
+    <Form id={id} onSubmit={onSubmit}>
+      <FormTable >
+          <>
+              <TrSelect
+                  label={'Select Field'}
+                  id={'select'}
+                  name={'select'}
+                  value={values.select}
+                  onChange={(value) => setValues({...values,select:value})}
+              />
+          </>
+      </FormTable>
+    </Form>
+  </Story>
+</Canvas>

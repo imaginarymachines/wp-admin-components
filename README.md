@@ -4,8 +4,9 @@ WordPress admin UI as React components for plugin development. These are very mi
 
 When using this in a plugin or theme, make sure to use [@wordpress/script](https://www.npmjs.com/package/@wordpress/scripts). This is configured automatically when you create plugins with [Plugin Machine](https://pluginmachine.com).
 
-- [Storybook Documentation](https://imaginarymachines.github.io/wp-admin-components)
-
+- [Storybook Documentation](https://imaginarymachines.github.io/wp-admin-components?path=/story/buttons--default)
+- [Github](https://github.com/imaginarymachines/wp-admin-components)
+-
 [![CI](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml/badge.svg)](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml)
 
 ## Usage
@@ -55,7 +56,7 @@ import {Tabs} from "@imaginary-machines/wp-admin-components"
 #### Dismissable Info Notice
 
 ```jsx
-import {Notice }from  "@imaginary-machines/wp-admin-components"
+import {Notice} from  "@imaginary-machines/wp-admin-components"
 
 <Notice
   heading={"Hey You! Buy Things!"}
@@ -71,7 +72,7 @@ import {Notice }from  "@imaginary-machines/wp-admin-components"
 #### Dismissable Error Notice
 
 ```jsx
-import {Notice }from  "@imaginary-machines/wp-admin-components"
+import {Notice} from  "@imaginary-machines/wp-admin-components"
 
 <Notice
   description={"There Was Error"}
@@ -86,38 +87,51 @@ import {Notice }from  "@imaginary-machines/wp-admin-components"
 
 ```jsx
 import {
-  FormTable, FormProps,TrInput,TrSelect,TrSubmitButton,Form }
-from  "@imaginary-machines/wp-admin-components"
-const [values,setValues] = useState({
+  Form,
+  FormTable,
+  FormProps,
+  TrInput,
+  TrSelect,
+  TrSubmitButton
+}
+from  "@imaginary-machines/wp-admin-components";
+
+const SettingsForm = () => {
+
+  const [values,setValues] = useState({
       input:'Input',
       select:'two'
-  })
+  });
+  const onSubmit = () => {}
   return (
-    <Form id={id} onSubmit={onSubmit}>
-      <FormTable >
-          <>
-              <TrInput
-                  label={'Input Field'}
-                  id={'input'}
-                  name={'input'}
-                  value={values.input}
-                  onChange={(value:string) => setValues({...values,input:value})}
-              />
-              <TrSelect
-                  label={'Select Field'}
-                  id={'select'}
-                  name={'select'}
-                  value={values.select}
-                  onChange={(value:string) => setValues({...values,select:value})}
-              />
-              <TrSubmitButton
-                  id={'submit-button'}
-                  name={'submit-button'}
-                  value={'Save'}
-              />
-          </>
-      </FormTable>
-  </Form>
+      <Form id={id} onSubmit={onSubmit}>
+        <FormTable >
+            <>
+                <TrInput
+                    label={'Input Field'}
+                    id={'input'}
+                    name={'input'}
+                    value={values.input}
+                    onChange={(value:string) => setValues({...values,input:value})}
+                />
+                <TrSelect
+                    label={'Select Field'}
+                    id={'select'}
+                    name={'select'}
+                    value={values.select}
+                    onChange={(value:string) => setValues({...values,select:value})}
+                />
+                <TrSubmitButton
+                    id={'submit-button'}
+                    name={'submit-button'}
+                    value={'Save'}
+                />
+            </>
+        </FormTable>
+    </Form>
+  )
+}
+
 ```
 
 ## Development
