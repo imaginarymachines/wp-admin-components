@@ -1,6 +1,10 @@
 # WP Admin Components
 
-WordPress admin UI as React components for plugin development
+WordPress admin UI as React components for plugin development. These are very minimal components, for building plugin UIs that look like WordPress. There is no CSS, the CSS and layout of a WordPress admin page is assumed.
+
+When using this in a plugin or theme, make sure to use [@wordpress/script](https://www.npmjs.com/package/@wordpress/scripts). This is configured automatically when you create plugins with [Plugin Machine](https://pluginmachine.com).
+
+- [Storybook Documentation](https://imaginarymachines.github.io/wp-admin-components)
 
 [![CI](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml/badge.svg)](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml)
 
