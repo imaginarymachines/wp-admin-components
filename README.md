@@ -134,6 +134,13 @@ const SettingsForm = () => {
 
 ```
 
+### Collapsable Metabox
+
+```jsx
+import {Metabox} from  "@imaginary-machines/wp-admin-components"
+<Metabox title={'Metabox Tile'}> Inside the box</Metabox>
+```
+
 ## Development
 
 The recommended workflow is to run TSDX in one terminal:
