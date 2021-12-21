@@ -6,8 +6,8 @@ When using this in a plugin or theme, make sure to use [@wordpress/script](https
 
 - [Storybook Documentation](https://imaginarymachines.github.io/wp-admin-components?path=/story/buttons--default)
 - [Github](https://github.com/imaginarymachines/wp-admin-components)
--
-[![CI](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml/badge.svg)](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml)
+- [![CI](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml/badge.svg)](https://github.com/imaginarymachines/wp-admin-components/actions/workflows/main.yml)
+- ![npm](https://img.shields.io/npm/v/@imaginary-machines/wp-admin-components?style=flat-square)
 
 ## Usage
 
