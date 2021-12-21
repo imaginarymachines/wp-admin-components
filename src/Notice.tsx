@@ -14,14 +14,14 @@ export const Notice: FC<NoticeProps> = ({
   type,
   onDismissed,
 }) => {
-  const [dismissed,setDismissed] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
 
   const handlerDismissed = () => {
     setDismissed(true);
-    if( undefined != onDismissed ){
+    if (undefined != onDismissed) {
       onDismissed();
     }
-  }
+  };
   const className = useMemo(() => {
     let cN = `notice ${type ? `notice-${type}` : ''}`;
     if (onDismissed) {
@@ -41,11 +41,14 @@ export const Notice: FC<NoticeProps> = ({
           <>{description} </>
         )}
         {onDismissed ? (
-          <button type="button" className="notice-dismiss" onClick={handlerDismissed}>
+          <button
+            type="button"
+            className="notice-dismiss"
+            onClick={handlerDismissed}
+          >
             <span className="screen-reader-text">Dismiss this notice.</span>
           </button>
-
-        ):null}
+        ) : null}
       </p>
     </div>
   );
