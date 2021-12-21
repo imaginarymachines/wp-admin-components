@@ -17,7 +17,10 @@ const Button: FC<ButtonProps> = ({
   isSmall,
   isHero,
 }) => {
-  let className = useMemo( () =>  `button  button-${variant ? variant : 'primary'}`, [variant]);
+  let className = useMemo(
+    () => `button  button-${variant ? variant : 'primary'}`,
+    [variant]
+  );
   if (isSmall) {
     className = `${className} button-small`;
   }

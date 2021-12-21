@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders default button 1`] = `
+<div>
+  <div
+    class="metabox-holder"
+    id="dashboard-widgets"
+  >
+    <div
+      class="postbox-container"
+      id="postbox-container-1"
+    >
+      <div
+        class="meta-box-sortables ui-sortable"
+        id="normal-sortables"
+      >
+        <div
+          class="postbox"
+          id="metabox"
+        >
+          <button
+            aria-expanded="true"
+            class="handlediv"
+            type="button"
+          >
+            <span
+              class="screen-reader-text"
+            >
+              Metabox collapse
+            </span>
+            <span
+              aria-hidden="true"
+              class="toggle-indicator"
+            />
+          </button>
+          <h2
+            class="hndle ui-sortable-handle"
+          >
+            <span>
+              Heading
+            </span>
+          </h2>
+          <div
+            class="inside"
+          >
+            <div
+              class="main"
+            >
+              World
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
