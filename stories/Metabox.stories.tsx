@@ -3,6 +3,8 @@ import { Meta, Story } from '@storybook/react';
 import {
   Metabox,
   MetaboxProps,
+  MetaboxWrapper,
+  MetaboxWrapperProps,
  } from '../src';
 
 const meta: Meta = {
@@ -34,7 +36,9 @@ export default meta;
 const Template: Story<MetaboxProps> = args => {
 
   return (
-    <Metabox title={args.title||'Metabox Tile'} >{args.children || 'Inside the box'}</Metabox>
+    <MetaboxWrapper>
+        <Metabox title={args.title||'Metabox Tile'} >{args.children || 'Inside the box'}</Metabox>
+    </MetaboxWrapper>
   )
 };
 

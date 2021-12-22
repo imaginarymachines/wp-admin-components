@@ -7,46 +7,113 @@ exports[`Renders default button 1`] = `
     id="dashboard-widgets"
   >
     <div
-      class="postbox-container"
-      id="postbox-container-1"
+      class="metabox-holder"
+      id="dashboard-widgets"
     >
       <div
-        class="meta-box-sortables ui-sortable"
-        id="normal-sortables"
+        class="postbox-container"
       >
         <div
-          class="postbox"
-          id="metabox"
+          class="meta-box-sortables ui-sortable"
         >
-          <button
-            aria-expanded="true"
-            class="handlediv"
-            type="button"
-          >
-            <span
-              class="screen-reader-text"
-            >
-              Metabox collapse
-            </span>
-            <span
-              aria-hidden="true"
-              class="toggle-indicator"
-            />
-          </button>
-          <h2
-            class="hndle ui-sortable-handle"
-          >
-            <span>
-              Heading
-            </span>
-          </h2>
           <div
-            class="inside"
+            class="postbox"
           >
-            <div
-              class="main"
+            <button
+              aria-expanded="true"
+              class="handlediv"
+              type="button"
             >
-              World
+              <span
+                class="screen-reader-text"
+              >
+                Metabox collapse
+              </span>
+              <span
+                aria-hidden="true"
+                class="toggle-indicator"
+              />
+            </button>
+            <h2
+              class="hndle ui-sortable-handle"
+            >
+              <span>
+                Heading
+              </span>
+            </h2>
+            <div
+              class="inside"
+            >
+              <div
+                class="main"
+              >
+                World
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders with many children 1`] = `
+<div>
+  <div
+    class="metabox-holder"
+    id="dashboard-widgets"
+  >
+    <div
+      class="metabox-holder"
+      id="dashboard-widgets"
+    >
+      <div
+        class="postbox-container"
+      >
+        <div
+          class="meta-box-sortables ui-sortable"
+        >
+          <div
+            class="postbox"
+          >
+            <button
+              aria-expanded="true"
+              class="handlediv"
+              type="button"
+            >
+              <span
+                class="screen-reader-text"
+              >
+                Metabox collapse
+              </span>
+              <span
+                aria-hidden="true"
+                class="toggle-indicator"
+              />
+            </button>
+            <h2
+              class="hndle ui-sortable-handle"
+            >
+              <span>
+                Heading
+              </span>
+            </h2>
+            <div
+              class="inside"
+            >
+              <div
+                class="main"
+              >
+                <div>
+                  <p>
+                    one
+                  </p>
+                  <em>
+                    Two
+                  </em>
+                </div>
+              </div>
             </div>
           </div>
         </div>

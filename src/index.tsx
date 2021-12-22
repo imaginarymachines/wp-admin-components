@@ -1,7 +1,9 @@
 import Button, { ButtonProps } from './Button';
 import { Tabs, TabsProps, TabProps } from './Tabs';
 import { Notice, NoticeProps } from './Notice';
-import Metabox, { MetaboxProps } from './Metabox';
+import Metabox, {
+  MetaboxProps,MetaboxWrapper,
+  MetaboxWrapperProps, } from './Metabox';
 import {
   FormTable,
   FormTableProps,
@@ -30,4 +32,6 @@ export {
   NoticeProps,
   Metabox,
   MetaboxProps,
+  MetaboxWrapper,
+  MetaboxWrapperProps,
 };

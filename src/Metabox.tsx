@@ -1,5 +1,16 @@
 import React, { FC, ReactChild, useState } from 'react';
 
+export interface MetaboxWrapperProps {
+  children: ReactChild;
+}
+export const MetaboxWrapper: FC<MetaboxWrapperProps> = ({ children }) => {
+  return (
+    <div id="dashboard-widgets" className="metabox-holder">
+      {children}
+    </div>
+  );
+};
+
 export interface MetaboxProps {
   children: ReactChild;
   title: string;
@@ -8,9 +19,9 @@ const Metabox: FC<MetaboxProps> = ({ children, title }) => {
   const [isOpen, setOpen] = useState<boolean>(true);
   return (
     <div id="dashboard-widgets" className="metabox-holder">
-      <div id="postbox-container-1" className="postbox-container">
-        <div id="normal-sortables" className="meta-box-sortables ui-sortable">
-          <div id="metabox" className="postbox">
+      <div className="postbox-container">
+        <div className="meta-box-sortables ui-sortable">
+          <div className="postbox">
             <button
               onClick={() => setOpen(!isOpen)}
               type="button"

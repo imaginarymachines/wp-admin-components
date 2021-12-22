@@ -137,8 +137,12 @@ const SettingsForm = () => {
 ### Collapsable Metabox
 
 ```jsx
-import {Metabox} from  "@imaginary-machines/wp-admin-components"
-<Metabox title={'Metabox Tile'}> Inside the box</Metabox>
+import {Metabox,MetaboxWrapper} from  "@imaginary-machines/wp-admin-components"
+<MetaboxWrapper>
+  <Metabox title={'Metabox Tile'}> Inside the box</Metabox>
+    <Metabox title={'Another Metabox Tile'}><p>Blocks</p></Metabox>
+
+</MetaboxWrapper>
 ```
 
 ## Development
