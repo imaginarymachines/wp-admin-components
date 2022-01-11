@@ -73,12 +73,12 @@ describe('FormTable', () => {
             </FormTable>
         </Form>);
         //@ts-ignore
-        expect( getByLabelText(selectProps.label).value).toBeTruthy('two');
+        expect( getByLabelText(selectProps.label).value).toBe('two');
 
     });
 
 
-    it( 'changes select', () => {
+    it( 'Select changes value', () => {
         const onSubmit = jest.fn();
         const onChange = jest.fn();
         const {getByLabelText} = render(<Form id="form-1" onSubmit={onSubmit}>
@@ -87,7 +87,8 @@ describe('FormTable', () => {
                     <TrSelect
                         {...{
                             ...selectProps,
-                            onChange:onChange
+                            onChange:onChange,
+                            value: 'two'
                         }}
                     />
                 </>
@@ -97,9 +98,9 @@ describe('FormTable', () => {
         act(  ()=> {
             fireEvent.change(getByLabelText('Select'), {target:{value:'one'}});
         });
-                //@ts-ignore
 
-        expect( getByLabelText(selectProps.label).value).toBeTruthy('one');
+        expect( onChange ).toBeCalledTimes(1);
+        expect( onChange ).toBeCalledWith('one');
 
     });
 })
