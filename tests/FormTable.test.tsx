@@ -146,5 +146,29 @@ describe('FormTable', () => {
         });
         expect( onChange ).toBeCalledTimes(1);
         expect( onChange ).toBeCalledWith('Rocks');
+    });
+
+    test( 'Submiting calls onSubmit', () => {
+        const onSubmit = jest.fn();
+        const {container} = render(<Form id="form-onSubmit-click" onSubmit={onSubmit}>
+            <FormTable >
+                <>
+                    <TrInput
+                        {...{
+                            ...inputProps,
+
+                        }}
+                    />
+                    <TrSubmitButton
+                        {...submitProps}
+                    />
+                </>
+            </FormTable>
+        </Form>);
+        act( () => {
+            //@ts-ignore
+            fireEvent.submit(container.querySelector('#form-onSubmit-click'));
+        });
+        expect( onSubmit ).toBeCalledTimes(1);
     })
 })
