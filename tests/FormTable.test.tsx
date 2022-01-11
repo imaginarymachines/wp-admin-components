@@ -1,7 +1,7 @@
 import {FormTable,Form, TrInput, TrSelect, TrSubmitButton} from '../src';
 import React from 'react';
 import snapshot from './snapshot';
-
+import {render,act, fireEvent} from '@testing-library/react';
 let inputChange = (value:string) => {console.log(value)}
 let inputProps = {
     id:'i-1',
@@ -51,5 +51,56 @@ describe('FormTable', () => {
                 </>
             </FormTable>
         </Form>)
+    });
+
+
+    it( 'Select has default value', () => {
+        const onSubmit = jest.fn();
+        const onChange = jest.fn();
+        const {getByLabelText} = render(<Form id="form-1" onSubmit={onSubmit}>
+            <FormTable >
+                <>
+
+                    <TrSelect
+                        {...{
+                            ...selectProps,
+                            onChange:onChange,
+                            value: 'two'
+                        }}
+                    />
+
+                </>
+            </FormTable>
+        </Form>);
+        //@ts-ignore
+        expect( getByLabelText(selectProps.label).value).toBe('two');
+
+    });
+
+
+    it( 'Select changes value', () => {
+        const onSubmit = jest.fn();
+        const onChange = jest.fn();
+        const {getByLabelText} = render(<Form id="form-1" onSubmit={onSubmit}>
+            <FormTable >
+                <>
+                    <TrSelect
+                        {...{
+                            ...selectProps,
+                            onChange:onChange,
+                            value: 'two'
+                        }}
+                    />
+                </>
+            </FormTable>
+        </Form>);
+
+        act(  ()=> {
+            fireEvent.change(getByLabelText('Select'), {target:{value:'one'}});
+        });
+
+        expect( onChange ).toBeCalledTimes(1);
+        expect( onChange ).toBeCalledWith('one');
+
     });
 })

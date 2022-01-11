@@ -1,17 +1,19 @@
 import React, { FC, ReactChild } from 'react';
 
 export const FieldTr: FC<{
+  id:string;
   children: ReactChild;
   name: string;
   label: string;
   help?: string;
   hideLabel?: boolean;
-}> = ({ children, name, label, help, hideLabel }) => {
+}> = ({ children, name, label, help, hideLabel,id }) => {
   return (
     <tr>
       <th scope="row">
         <label
-          htmlFor={name}
+          id={`${id}-label`}
+          htmlFor={id}
           className={hideLabel ? 'sr-only screen-reader-text' : ''}
         >
           {label}

@@ -17,6 +17,7 @@ exports[`FormTable creates form 1`] = `
             <label
               class=""
               for="i-1"
+              id="i-1-label"
             >
               Input One
             </label>
@@ -38,12 +39,18 @@ exports[`FormTable creates form 1`] = `
             <label
               class=""
               for="s-1"
+              id="s-1-label"
             >
               Select
             </label>
           </th>
           <td>
-            <select>
+            <select
+              class="postform"
+              id="s-1"
+              label="Select"
+              name="s-1"
+            >
               <option
                 class="level-0"
                 value="one"
@@ -66,6 +73,7 @@ exports[`FormTable creates form 1`] = `
             <label
               class="sr-only screen-reader-text"
               for="sub-1"
+              id="sub-1-label"
             >
               Click Me
             </label>

@@ -2,6 +2,7 @@ import React, { FC, useMemo } from 'react';
 import { FieldTr } from './FieldTr';
 
 export interface FieldProps {
+  id:string;
   name: string;
   label: string;
   value: string;
@@ -16,6 +17,7 @@ export interface SelectProps extends FieldProps {
   }[];
 }
 export const TrSelect: FC<SelectProps> = ({
+  id,
   name,
   label,
   value,
@@ -23,20 +25,24 @@ export const TrSelect: FC<SelectProps> = ({
   help,
   onChange,
 }) => {
+  //Create the props for select element
   const attrs = useMemo(() => {
-    let a: any = {
+    let _attrs: any = {
+      id,
       name,
       label,
       value,
       className: 'postform',
     };
     if (help) {
-      a['aria-describedby'] = `${name}-description`;
+      _attrs['aria-describedby'] = `${name}-description`;
     }
+    return _attrs;
   }, [name, label, value, help]);
+
   return (
-    <FieldTr name={name} label={label} help={help}>
-      <select {...attrs} onChange={(e) => onChange(e.target.value)}>
+    <FieldTr name={name} label={label} help={help} id={id}>
+      <select {...attrs} onChange={(e) => onChange(e.target.value)} value={value}>
         {options.map(({ value, label }) => (
           <option className="level-0" value={value} key={value}>
             {label}
@@ -55,14 +61,15 @@ export const TrInput: FC<InputProps> = ({
   label,
   value,
   type,
+  id,
   onChange,
 }) => {
   return (
-    <FieldTr name={name} label={label}>
+    <FieldTr name={name} label={label} id={id}>
       <input
         name={name}
         type={type ? type : 'text'}
-        id={name}
+        id={id}
         defaultValue={value}
         className="regular-text ltr"
         onChange={(e) => onChange(e.target.value)}
@@ -88,16 +95,18 @@ export const TrSubmitButton: FC<SubmitProps> = ({
   disabled,
   onClick,
   label,
+  id
 }) => (
   <FieldTr
     name={name}
     label={label ? label : value}
     hideLabel={label ? false : true}
+    id={id}
   >
     <input
       type="submit"
       name={name}
-      id={name}
+      id={id}
       className={`button button-${variant ? variant : 'primary'} button-hero`}
       value={value}
       disabled={disabled}
