@@ -103,4 +103,72 @@ describe('FormTable', () => {
         expect( onChange ).toBeCalledWith('one');
 
     });
+
+
+    test( 'Input sets default value', () => {
+        const onSubmit = jest.fn();
+        const onChange = jest.fn();
+        const {getByLabelText} = render(<Form id="form-1" onSubmit={onSubmit}>
+            <FormTable >
+                <>
+                    <TrInput
+                        {...{
+                            ...inputProps,
+                            onChange:onChange,
+                            value: 'Hats'
+                        }}
+                    />
+                </>
+            </FormTable>
+        </Form>);
+        //@ts-ignore
+        expect( getByLabelText(inputProps.label).value).toBe('Hats');
+    })
+
+    test( 'Input cahnges value', () => {
+        const onSubmit = jest.fn();
+        const onChange = jest.fn();
+        const {getByLabelText} = render(<Form id="form-1" onSubmit={onSubmit}>
+            <FormTable >
+                <>
+                    <TrInput
+                        {...{
+                            ...inputProps,
+                            onChange:onChange,
+                            value: 'Hats'
+                        }}
+                    />
+                </>
+            </FormTable>
+        </Form>);
+        act( () => {
+            fireEvent.change(getByLabelText(inputProps.label),{target:{value:'Rocks'}});
+        });
+        expect( onChange ).toBeCalledTimes(1);
+        expect( onChange ).toBeCalledWith('Rocks');
+    });
+
+    test( 'Submiting calls onSubmit', () => {
+        const onSubmit = jest.fn();
+        const {container} = render(<Form id="form-onSubmit-click" onSubmit={onSubmit}>
+            <FormTable >
+                <>
+                    <TrInput
+                        {...{
+                            ...inputProps,
+
+                        }}
+                    />
+                    <TrSubmitButton
+                        {...submitProps}
+                    />
+                </>
+            </FormTable>
+        </Form>);
+        act( () => {
+            //@ts-ignore
+            fireEvent.submit(container.querySelector('#form-onSubmit-click'));
+        });
+        expect( onSubmit ).toBeCalledTimes(1);
+    })
 })
