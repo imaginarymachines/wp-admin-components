@@ -1,5 +1,20 @@
 import React, { FC, ReactChild } from 'react';
 
+export const Label: FC<{
+  id: string;
+  hideLabel?: boolean;
+  children: string | JSX.Element;
+}> = ({ id, hideLabel, children }) => {
+  return (
+    <label
+      id={`${id}-label`}
+      htmlFor={id}
+      className={hideLabel ? 'sr-only screen-reader-text' : ''}
+    >
+      {children}
+    </label>
+  );
+};
 export const FieldTr: FC<{
   id: string;
   children: ReactChild;
@@ -11,13 +26,9 @@ export const FieldTr: FC<{
   return (
     <tr>
       <th scope="row">
-        <label
-          id={`${id}-label`}
-          htmlFor={id}
-          className={hideLabel ? 'sr-only screen-reader-text' : ''}
-        >
+        <Label id={id} hideLabel={hideLabel}>
           {label}
-        </label>
+        </Label>
         {help ? (
           <p id={`${name}-description`} className="description">
             {help}

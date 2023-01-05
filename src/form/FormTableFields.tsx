@@ -60,6 +60,19 @@ export const TrSelect: FC<SelectProps> = ({
 export interface InputProps extends FieldProps {
   type?: 'text' | 'number' | 'url';
 }
+
+export const Input: FC<InputProps> = ({ id, name, value, type, onChange }) => {
+  return (
+    <input
+      name={name}
+      type={type ? type : 'text'}
+      id={id}
+      defaultValue={value}
+      className="regular-text ltr"
+      onChange={(e) => onChange(e.target.value)}
+    />
+  );
+};
 export const TrInput: FC<InputProps> = ({
   name,
   label,
@@ -71,13 +84,13 @@ export const TrInput: FC<InputProps> = ({
 }) => {
   return (
     <FieldTr name={name} label={label} id={id} help={help}>
-      <input
+      <Input
+        label={label}
         name={name}
-        type={type ? type : 'text'}
+        value={value}
+        type={type}
         id={id}
-        defaultValue={value}
-        className="regular-text ltr"
-        onChange={(e) => onChange(e.target.value)}
+        onChange={onChange}
       />
     </FieldTr>
   );
