@@ -2,7 +2,7 @@ import React, { FC, useMemo } from 'react';
 import { FieldTr } from './FieldTr';
 
 export interface FieldProps {
-  id:string;
+  id: string;
   name: string;
   label: string;
   value: string;
@@ -42,7 +42,11 @@ export const TrSelect: FC<SelectProps> = ({
 
   return (
     <FieldTr name={name} label={label} help={help} id={id}>
-      <select {...attrs} onChange={(e) => onChange(e.target.value)} value={value}>
+      <select
+        {...attrs}
+        onChange={(e) => onChange(e.target.value)}
+        value={value}
+      >
         {options.map(({ value, label }) => (
           <option className="level-0" value={value} key={value}>
             {label}
@@ -62,10 +66,11 @@ export const TrInput: FC<InputProps> = ({
   value,
   type,
   id,
+  help,
   onChange,
 }) => {
   return (
-    <FieldTr name={name} label={label} id={id}>
+    <FieldTr name={name} label={label} id={id} help={help}>
       <input
         name={name}
         type={type ? type : 'text'}
@@ -95,7 +100,7 @@ export const TrSubmitButton: FC<SubmitProps> = ({
   disabled,
   onClick,
   label,
-  id
+  id,
 }) => (
   <FieldTr
     name={name}

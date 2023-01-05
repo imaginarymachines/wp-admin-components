@@ -11,6 +11,15 @@ let inputProps = {
     value: ''
 }
 
+let input2Props = {
+  id:'i-3',
+  label:'Input With Help Text',
+  onChange:inputChange,
+  name: 'i-3',
+  value: '',
+  help:'This is help text'
+}
+
 let selectChange = (value:string) => {console.log(value)}
 let selectProps = {
     id:'s-1',
@@ -54,6 +63,7 @@ export default meta;
 const Test : FC<FormProps> = ({id,onSubmit}) => {
   const [values,setValues] = useState({
       input:'Input',
+      input2: '',
       select:'two'
   })
   return (
@@ -64,6 +74,11 @@ const Test : FC<FormProps> = ({id,onSubmit}) => {
                   {...inputProps}
                   value={values.input}
                   onChange={(value:string) => setValues({...values,input:value})}
+              />
+              <TrInput
+                  {...input2Props}
+                  value={values.input2}
+                  onChange={(value:string) => setValues({...values,input2:value})}
               />
               <TrSelect
                   {...selectProps}

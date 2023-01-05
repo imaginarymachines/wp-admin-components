@@ -123,7 +123,31 @@ describe('FormTable', () => {
         </Form>);
         //@ts-ignore
         expect( getByLabelText(inputProps.label).value).toBe('Hats');
-    })
+    });
+
+    test('can have help text', () => {
+        const onSubmit = jest.fn();
+        const onChange = jest.fn();
+        const props = {
+
+            ...inputProps,
+            label: 'InHelp',
+            onChange:onChange,
+            help: 'THE HELP TEXT'
+        }
+        const {getByText} = render(<Form id="form-1" onSubmit={onSubmit}>
+            <FormTable >
+                <>
+                    <TrInput
+                        {...props}
+                    />
+                </>
+            </FormTable>
+        </Form>);
+        //@ts-ignore
+        //find help text
+        expect( getByText(props.help)).toBeTruthy();
+    });
 
     test( 'Input cahnges value', () => {
         const onSubmit = jest.fn();

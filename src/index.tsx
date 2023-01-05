@@ -2,8 +2,10 @@ import Button, { ButtonProps } from './Button';
 import { Tabs, TabsProps, TabProps } from './Tabs';
 import { Notice, NoticeProps } from './Notice';
 import Metabox, {
-  MetaboxProps,MetaboxWrapper,
-  MetaboxWrapperProps, } from './Metabox';
+  MetaboxProps,
+  MetaboxWrapper,
+  MetaboxWrapperProps,
+} from './Metabox';
 import {
   FormTable,
   FormTableProps,

@@ -1,13 +1,13 @@
 import React, { FC, ReactChild } from 'react';
 
 export const FieldTr: FC<{
-  id:string;
+  id: string;
   children: ReactChild;
   name: string;
   label: string;
   help?: string;
   hideLabel?: boolean;
-}> = ({ children, name, label, help, hideLabel,id }) => {
+}> = ({ children, name, label, help, hideLabel, id }) => {
   return (
     <tr>
       <th scope="row">
@@ -19,9 +19,9 @@ export const FieldTr: FC<{
           {label}
         </label>
         {help ? (
-          <span id={`${name}-description`} className="description">
+          <p id={`${name}-description`} className="description">
             {help}
-          </span>
+          </p>
         ) : null}
       </th>
       <td>{children}</td>
